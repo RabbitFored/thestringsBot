@@ -1,0 +1,24 @@
+package main
+
+import (
+  tl "github.com/goTelegramBot/telepher"
+  "github.com/goTelegramBot/telepher/types"
+)
+
+
+func wordlist(b tl.Bot,m *types.Message){
+   args := m.Args()
+   if len(args) < 2 {
+      b.SendMessage(m.Chat.Id,"*Specify some keyword to get wordlist from available collection*",&tl.Options{ParseMode:"Markdown"})
+      return
+  }
+   if args[1] == "profanity" {
+  document := types.InputFile{
+    FilePath:"wordlists/profanity-en.txt",  
+  }
+      b.SendDocument(m.Chat.Id, document,nil)
+     
+   }else{
+b.SendMessage(m.Chat.Id,"*Wordlist not found*",&tl.Options{ParseMode:"Markdown"})}
+
+}
