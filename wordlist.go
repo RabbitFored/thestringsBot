@@ -16,9 +16,12 @@ func wordlist(b tl.Bot,m *types.Message){
   document := types.InputFile{
     FilePath:"wordlists/profanity-en.txt",  
   }
-      b.SendDocument(m.Chat.Id, document,nil)
+     _,err := b.SendDocument(m.Chat.Id, document,nil)
+     if err != nil{
+        b.SendMessage(m.Chat.Id,"*Wordlist not found*",&tl.Options{ParseMode:"Markdown"})}
+     }
      
    }else{
-b.SendMessage(m.Chat.Id,"*Wordlist not found*",&tl.Options{ParseMode:"Markdown"})}
+  b.SendMessage(m.Chat.Id,"*Wordlist not found*",&tl.Options{ParseMode:"Markdown"})}
 
 }
