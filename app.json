@@ -1,0 +1,28 @@
+{
+  "name": "Dwindle-telegram-bot",
+  "description": "A telegram bot that can do string shows.",
+  "keywords": [
+    "strings",
+    "golang",
+    "telegram",
+    "bot"
+  ],
+  "website": "https://github.com/RabbitFored/thestringsBot/",
+  "repository": "https://github.com/RabbitFored/thestringsBot/",
+  "success_url": "https://t.me/thestringsBot",
+  "env": {
+    "TOKEN": {
+      "description": "Your telegram bot token.",
+      "value": ""
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+   "buildpacks":
+ [ 
+  { "url": "heroku/python" } ]
+ }
