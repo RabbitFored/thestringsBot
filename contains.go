@@ -2,8 +2,8 @@ package main
 
 import (
   "regexp"
-  tl "github.com/goTelegramBot/telepher"
-  "github.com/goTelegramBot/telepher/types"
+  tl "github.com/goTelegramBot/gogram"
+  "github.com/goTelegramBot/gogram/types"
 )
 
 func contains(b tl.Bot,m *types.Message){
