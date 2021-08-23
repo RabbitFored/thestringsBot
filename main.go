@@ -33,6 +33,7 @@ func help(bot tl.Bot,message *types.Message){
     - /wordlist <keyword> : Provides wordlist of <keyword> [Under development]
     - /symbols : Get a list of symbols.
     - /reverse : .txet ruoy esreveR
+    - /flip : ˙ʇxǝʇ ɹnoʎ dıןℲ
     - /case <style> : Change sentence case of your text.
         Style maybe :
                   `+"`"+`upper`+"`"+`, `+"`"+`lower`+"`"+`, `+"`"+`title`+"`"+`, `+"`"+`camel`+"`"+`, `+"`"+`camel-lower`+"`"+`, `+"`"+`title-proper`+"`"+`, `+"`"+`mixed`+"`"+`, `+"`"+`mixed-inverse`+"`"+`
@@ -87,6 +88,7 @@ b.Command("upper",upper)
 b.Command("lower",lower)
 b.Command("case",change_case)
 b.Command("reverse",reverse)
+b.Command("flip",flip)
 b.Command("symbols",symbols)
 b.Command("contains",contains)
 b.Command("strength",strength)
